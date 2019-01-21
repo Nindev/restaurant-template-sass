@@ -9,94 +9,93 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <div id="wrapper">
     <header>
-      <div id="logo"><h1>O'VESUVIO</h1></div>
-      <div id="main-menu">
-        <ul class="menu">
-          <li>Accueil</li>
-          <li>Restaurant</li>
-          <li>Menu</li>
-          <li>Contact</li>
+      <!-- <div id="logo"><a href="#">O'VESUVIO</a></div> -->
+      <nav id="main-nav">
+        <ul class="nav-list">
+          <li class="nav-list-item"><a href="#logo">Accueil</a></li>
+          <li class="nav-list-item"><a href="#restaurant">Restaurant</a></li>
+          <li class="nav-list-item"><a href="#menu">Menu</a></li>
+          <li class="nav-list-item"><a href="#contact">Contact</a></li>
         </ul>
-      </div>
+      </nav>
     </header>
     <main>
       <section id="presentation">
-        <div class="restaurant-title">
-          <h2>O'VESUVIO</h2>
-          <strong>Pizza cuite au feu de bois</strong>
-        </div>
-        <div class="restaurant-title">
-          <p><strong>01 69 51 13 13</strong></p>
-        </div>
-        <div class="btn-container">
-          <button class="commander">Consulter le menu</button>
+        <div class="container-parallax">
+          <div class="restaurant-title">
+            <h1>O'VESUVIO</h1>
+            <p class="subtitle"><strong>Pizza cuite au feu de bois</strong></p>
+            <p class="phoneNumber"><strong>01 69 51 13 13</strong></p>
+            <button class="btn-display-menu">CONSULTER LE MENU</button>
+          </div>
         </div>
       </section>
       <section id="restaurant">
         <div class="section-title">
-          <h3>Restaurant</h3>
+          <h2>Restaurant</h2>
         </div>
-        <div class="item-container">
-          <div class="restaurant-item bar">
-            <div class="restautant-item-img">
-                <img id="bar-img" style="width: 300px;" src="./img/B-ovesuvio3.jpg" alt="">
+        <div class="restaurant-items">
+          <div class="bar">
+            <div class="restaurant-item">
+              <img src="./img/B-ovesuvio3.jpg" alt="">
+              <div class="description">
+                <h3>LE BAR</h3>
+                <p>Adipisicing pariatur ullamco dolore id Lorem laborum commodo pariatur amet officia cupidatat.</p>
+              </div>
             </div>
-            <div class="restautant-item-descr">
-              <h4>Le bar</h4>
-              <p></p>
+          </div> 
+          <div class="restaurant">
+            <div class="restaurant-item">
+              <img src="./img/R-ovesuvio2.jpg" alt="">
+              <div class="description">
+                <h3>LE RESTAURANT</h3>
+                <p>Officia id dolor consequat enim officia veniam cupidatat sit.</p>
+              </div>
             </div>
           </div>
-          <div class="restaurant-item restaurant">
-            <div class="restautant-item-img">
-                <img style="width: 300px;" src="./img/R-ovesuvio2.jpg" alt="">
-            </div>
-            <div class="restautant-item-descr">
-              <h4>Le restaurant</h4>
-              <p></p>
-            </div>
-          </div>
-          <div class="restaurant-item notoriete">
-            <div class="restautant-item-img">
-                <img style="width: 300px;" src="./img/R-ovesuvio4.jpg" alt="">
-            </div>
-            <div class="descr">
-              <h4>Notoriété</h4>
-              <p></p>
+          <div class="notoriete">
+            <div class="restaurant-item">
+              <img src="./img/R-ovesuvio4.jpg" alt="">
+              <div class="description">
+                <h3>NOTORIÉTÉ</h3>
+                <p><a href="https://www.tripadvisor.fr/Restaurant_Review-g1968638-d9807588-Reviews-O_Vesuvio-Villemoisson_sur_Orge_Essonne_Ile_de_France.html?m=19905">TripAdvisor</a></p>
+              </div>
             </div>
           </div>
         </div>
       </section>
       <section id="menu">
         <div class="section-title">
-          <h3>Menu</h3>
+          <h2>Menu</h2>
         </div>
         <div class="item-container">
           <div class="menu-item carte">
-            <h4>LA CARTE</p>
+            <h3>LA CARTE</p>
             <a href="">Voir le menu</a>
           </div>
           <div class="menu-item livraison">
-            <h4>LIVRAISON</h4>
+            <h3>LIVRAISON</h3>
             <a href="">Voir le menu</a>
           </div>
         </div>
       </section>
       <section id="contact">
         <div class="section-title">
-          <h3>Contact</h3>
+          <h2>Contact</h2>
         </div>
         <div class="item-container">
           <div class="contact-item adress">
             <div class="descr">
-              <h4>Adresse</h4>
+              <h3>Adresse</h3>
               <p>134 Route de Corbeil</p>
               <p>91360 Villemoisson-sur-Orge</p>
             </div>
           </div>
           <div class="contact-item horaires">
             <div class="descr">
-              <h4>Heures d'ouverture</h4>
+              <h3>Heures d'ouverture</h3>
               <p>Lundi au Jeudi : 12H-14H et 19H-22H</p>
               <p>Vendredi et Samedi : 12H-14H, 19H-22H30</p>
               <p>Dimanche : Fermé</p>
@@ -111,7 +110,7 @@
     <footer>
       <div class="logo">O'VESUVIO</div>
       <div class="feedback">
-        <h5>Avis de la clientèle</h5>
+        <h4>Avis de la clientèle</h4>
         <div class="feedback-item">
           <p>"Consequat aliquip laboris commodo non nostrud aliqua dolor eiusmod."</p>
         </div>
@@ -124,5 +123,6 @@
         <a href=""><img src="" alt="TripAdvisor"></a>
       </div>
     </footer>
+  </div>
 </body>
 </html>

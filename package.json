@@ -8,5 +8,10 @@
   },
   "author": "",
   "license": "ISC",
-  "devDependencies": {}
+  "devDependencies": {
+    "gulp": "^4.0.0"
+  },
+  "dependencies": {
+    "bootstrap-scss": "^4.2.1"
+  }
 }
