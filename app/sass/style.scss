@@ -72,6 +72,26 @@ $section-title-height: 20px;
   border-top: 8px solid #262626;
 }
 
+@mixin home-btn-display-menu {
+  color: $dark;
+  padding: 25px;
+  font-size: 15px;
+  font-weight: 600;
+  border: 2px solid $dark;
+  background-color: transparent;
+  font-family: 'EB Garamond', sans-serif;
+}
+
+@mixin btn-display-menu {
+  color: $dark;
+  padding: 15px;
+  font-size: 15px;
+  font-weight: 600;
+  border: 2px solid $dark;
+  background-color: transparent;
+  font-family: 'EB Garamond', sans-serif;
+}
+
 @mixin linx($link, $visit, $hover, $active){
   a {
     text-decoration: none;
@@ -205,13 +225,7 @@ main {
         }
 
         .btn-display-menu {
-          color: $dark;
-          padding: 25px;
-          font-size: 15px;
-          font-weight: 600;
-          border: 2px solid $dark;
-          background-color: transparent;
-          font-family: 'EB Garamond', sans-serif;
+          @include home-btn-display-menu;
         }
 
         .btn-display-menu:hover {
@@ -293,8 +307,19 @@ main {
             margin: 220px auto;
 
             h3 {
-              color: $white;
+              color: $dark;
               font-size: 40px;
+            }
+
+            .btn-display-menu {
+              @include btn-display-menu;
+            }
+
+            .btn-display-menu:hover {
+              color: $white;
+              font-weight: bold;
+              border: 2px solid darken($dark, 5%);
+              background-color: darken($dark, 5%);
             }
           }
         }

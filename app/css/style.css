@@ -163,7 +163,20 @@ main #menu .container-parallax {
         height: auto;
         margin: 220px auto; }
         main #menu .container-parallax .item-container .menu-item .carte h3, main #menu .container-parallax .item-container .menu-item .livraison h3 {
-          color: white;
+          color: #333;
           font-size: 40px; }
+        main #menu .container-parallax .item-container .menu-item .carte .btn-display-menu, main #menu .container-parallax .item-container .menu-item .livraison .btn-display-menu {
+          color: #333;
+          padding: 15px;
+          font-size: 15px;
+          font-weight: 600;
+          border: 2px solid #333;
+          background-color: transparent;
+          font-family: 'EB Garamond', sans-serif; }
+        main #menu .container-parallax .item-container .menu-item .carte .btn-display-menu:hover, main #menu .container-parallax .item-container .menu-item .livraison .btn-display-menu:hover {
+          color: white;
+          font-weight: bold;
+          border: 2px solid #262626;
+          background-color: #262626; }
 
 /*# sourceMappingURL=style.css.map */
