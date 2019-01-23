@@ -24,7 +24,7 @@ header {
   position: fixed; }
   header #main-nav {
     display: flex;
-    flex: 3;
+    flex: initial;
     flex-flow: row wrap;
     justify-content: center;
     height: inherit; }
@@ -97,27 +97,35 @@ main #order-menu {
           padding: 0;
           text-align: center;
           list-style: none; }
-          main #order-menu .container-parallax .menu #menu-nav ul.menu-type li.nav-list-item {
+          main #order-menu .container-parallax .menu #menu-nav ul.menu-type li.menu-type-item {
             font-family: "Josefin Sans", "Vollkorn", "EB Garamond", sans-serif;
             display: inline-block;
-            padding: 20px 50px;
+            padding: 0 10px;
             text-transform: uppercase; }
-            main #order-menu .container-parallax .menu #menu-nav ul.menu-type li.nav-list-item a {
+            main #order-menu .container-parallax .menu #menu-nav ul.menu-type li.menu-type-item a {
               color: #333;
               width: 50%;
               font-size: 20px;
               text-decoration: none;
               font-family: "Josefin Sans", "Vollkorn", "EB Garamond", sans-serif; }
-              main #order-menu .container-parallax .menu #menu-nav ul.menu-type li.nav-list-item a:visited {
+              main #order-menu .container-parallax .menu #menu-nav ul.menu-type li.menu-type-item a:visited {
                 color: #333; }
-              main #order-menu .container-parallax .menu #menu-nav ul.menu-type li.nav-list-item a:hover {
+              main #order-menu .container-parallax .menu #menu-nav ul.menu-type li.menu-type-item a:hover {
                 color: #333; }
-              main #order-menu .container-parallax .menu #menu-nav ul.menu-type li.nav-list-item a:active {
+              main #order-menu .container-parallax .menu #menu-nav ul.menu-type li.menu-type-item a:active {
                 color: #333; }
+            main #order-menu .container-parallax .menu #menu-nav ul.menu-type li.menu-type-item span.arrow-left {
+              font-size: 40px; }
+            main #order-menu .container-parallax .menu #menu-nav ul.menu-type li.menu-type-item span.arrow-right {
+              display: none;
+              font-size: 40px; }
+            main #order-menu .container-parallax .menu #menu-nav ul.menu-type li.menu-type-item .shrink {
+              font-size: 15px; }
         main #order-menu .container-parallax .menu #menu-nav ul.nav-list {
           background-color: #262626;
           margin: 0;
           padding: 0;
+          text-align: center;
           color: white;
           list-style: none; }
           main #order-menu .container-parallax .menu #menu-nav ul.nav-list li.nav-list-item {

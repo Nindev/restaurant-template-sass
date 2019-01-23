@@ -103,6 +103,11 @@ $section-title-height: 20px;
   border-top: 8px solid #262626;
 }
 
+// Title style events
+@mixin title-shrink {
+  font-size: 15px;
+}
+
 // Text dispositions
 @mixin text-align-center {
   text-align: center;
@@ -203,7 +208,7 @@ header {
   position: fixed;
 
   #main-nav {
-    @include flex-3-center;
+    @include flex-initial-center;
 
     height: inherit;
 
@@ -279,13 +284,14 @@ main {
       
       .menu {
         @include white-bg;
+
         height: 800px;
         margin: 100px auto 0;
         overflow-y: overlay;
         border: 8px solid darken($dark, 5%);
         box-sizing: border-box;
         
-        #menu-nav {          
+        #menu-nav {
           height: auto;
           
           ul.menu-type {
@@ -294,20 +300,35 @@ main {
             @include text-align-center;
             list-style: none;
 
-            li.nav-list-item {
+            li.menu-type-item {
               // $link, $visit, $hover, $active
               @include linx-menu-type($dark, $dark, $dark, $dark);
 
               font-family: $nav-font;
               display: inline-block;
-              padding: 20px 50px;
+              padding: 0 10px;
               text-transform: uppercase;
+
+              span.arrow-left {
+                font-size: 40px;
+              }
+              
+              span.arrow-right {
+                display: none;
+                font-size: 40px;
+              }
+
+              .shrink {
+                @include title-shrink;
+              }
             }
           }
 
           ul.nav-list {
             @include dark-bg;
             @include no-spacing;
+            @include text-align-center;
+            
             color: $white;
             list-style: none;
             
