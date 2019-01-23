@@ -68,7 +68,21 @@ $section-title-height: 20px;
   align-content: flex-start;
 }
 
-@mixin flex-center {
+@mixin flex-3-start {
+  display: flex;
+  flex: 3;
+  flex-flow: row wrap;
+  align-content: flex-start;
+}
+
+@mixin flex-initial-center {
+  display: flex;
+  flex: initial;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+@mixin flex-3-center {
   display: flex;
   flex: 3;
   flex-flow: row wrap;
@@ -92,6 +106,10 @@ $section-title-height: 20px;
 // Text dispositions
 @mixin text-align-center {
   text-align: center;
+}
+
+@mixin text-align-justify {
+  text-align: justify;
 }
 
 // Button styles
@@ -185,7 +203,7 @@ header {
   position: fixed;
 
   #main-nav {
-    @include flex-center;
+    @include flex-3-center;
 
     height: inherit;
 
@@ -246,7 +264,7 @@ main {
     height: $section-height;
 
     .container-parallax {
-      @include flex-center;
+      @include flex-3-center;
       @include center-block;
 
       background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.8)), url("../img/Carpaccio-Parma-ham-pizza_1903x1269.png");
@@ -263,14 +281,14 @@ main {
         @include white-bg;
         height: 800px;
         margin: 100px auto 0;
+        overflow-y: overlay;
+        border: 8px solid darken($dark, 5%);
+        box-sizing: border-box;
         
-        #menu-nav {
-          // @include flex-center;
-          
+        #menu-nav {          
           height: auto;
           
           ul.menu-type {
-            // @include flex-center;
             @include white-bg;
             @include no-spacing;
             @include text-align-center;
@@ -306,6 +324,8 @@ main {
         }
 
         .menu-container {
+          padding: 20px;
+
           #carte,
           #emporter {
             // $link, $visit, $hover, $active
@@ -313,8 +333,79 @@ main {
             
             width: $col-12;
             height: auto;
+
+            .formule, .entree, .pizza, .pasta, .specialite, .dessert {
+              padding: 20px 0;
+            }
+            
+
             .menu-title {
               @include text-align-center;
+              @include no-spacing;
+            }
+
+
+            // Formule block
+            .formule  {
+              width: fit-content;
+              margin: auto;
+
+              .formule-item {
+                @include text-align-center;
+
+                display: inline-block;
+                margin: 0 100px;
+                min-height: 50px;
+              }
+            }
+
+            // Pizza block
+            .pizza  {
+              width: max-content;
+              margin: 0 auto;
+              width: 75%;
+
+              .pizza-items {
+                ul.pizza-items-list {
+                  @include no-spacing;
+  
+                  list-style: none;
+
+                  .pizza-item {
+                    @include text-align-justify;
+                    min-height: 40px;
+
+                    span.pizza-price {
+                      float: right;
+                    }
+                  }
+                }
+              }
+            }
+
+            // Entrée block
+            .entree  {
+              margin: 20px 0 0;
+              width: max-content;
+              margin: 0 auto;
+              width: 75%;
+
+              .entree-items {
+                ul.entree-items-list {
+                  @include no-spacing;
+  
+                  list-style: none;
+
+                  .entree-item {
+                    @include text-align-justify;
+                    min-height: 40px;
+
+                    span.entree-price {
+                      float: right;
+                    }
+                  }
+                }
+              }
             }
           }
         }

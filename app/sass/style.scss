@@ -58,7 +58,14 @@ $section-title-height: 20px;
   align-content: flex-start;
 }
 
-@mixin flex-center {
+@mixin flex-initial-center {
+  display: flex;
+  flex: initial;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+@mixin flex-3-center {
   display: flex;
   flex: 3;
   flex-flow: row wrap;
@@ -178,14 +185,14 @@ header {
   position: fixed;
 
   #main-nav {
-    @include flex-center;
+    @include flex-initial-center;
 
     height: inherit;
 
     ul.nav-list {
       @include no-spacing;
-      color: $white;
       list-style: none;
+      color: $white;
 
       .nav-list-item {
         // $link, $visit, $hover, $active
@@ -234,16 +241,16 @@ main {
   }
 
   #presentation {
-    @include flex-center;
+    @include flex-3-center;
     @include center-block;
   }
 
   // Presentation
   #presentation {
-    height: $section-height;
+    min-height: $section-height;
 
     .container-parallax {
-      @include flex-center;
+      @include flex-3-center;
       @include center-block;
 
       background-image: linear-gradient( rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.8)), url("../img/Carpaccio-Parma-ham-pizza_1903x1269.png");
@@ -294,7 +301,7 @@ main {
 
   // Restaurant
   #restaurant {
-    height: $section-height;
+    min-height: $section-height;
 
     .section-title {
       @include section-title;
@@ -329,14 +336,14 @@ main {
 
   // Menu
   #menu {
-    height: $section-height;
+    min-height: $section-height;
 
     .container-parallax {
-      @include flex-center;
+      @include flex-initial-center;
       @include center-block;
       
       background-image: linear-gradient( rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.8)), url("../img/Carpaccio-Parma-ham-pizza_1903x1269.png");
-      height: $section-height;
+      height: -webkit-fill-available;
       
       /* Parallax scrolling effect */
       background-attachment: fixed;
@@ -349,23 +356,30 @@ main {
       }
 
       .item-container {
+        @include flex-initial-center;
+        @include center-block;
+
         width: fit-content;
-        margin: auto;
+        margin: 0 auto;
 
         .menu-item {
-          display: inline-block;
+          @include flex-initial-center;
+          @include center-block;
+
           width: 500px;
           height: 500px;
-          margin: 150px 0;
+          margin: 0;
           background-image: url("../img/custom-img/diamond_thiner_border_white_bg_black_opacity30_500x500.png");
-          
+          background-repeat: no-repeat;
+          background-size: contain;
+
           .carte, .emporter {
             // $link, $visit, $hover, $active
             @include linx($white, $white, $white, $white);
 
             text-align: center;
             height: auto;
-            margin: 220px auto;
+            margin: auto;
 
             h3 {
               color: $dark;

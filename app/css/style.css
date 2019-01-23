@@ -23,15 +23,15 @@ header {
   position: fixed; }
   header #main-nav {
     display: flex;
-    flex: 3;
+    flex: initial;
     flex-flow: row wrap;
     justify-content: center;
     height: inherit; }
     header #main-nav ul.nav-list {
       margin: 0;
       padding: 0;
-      color: white;
-      list-style: none; }
+      list-style: none;
+      color: white; }
       header #main-nav ul.nav-list .nav-list-item {
         font-family: "Josefin Sans", "Vollkorn", "EB Garamond", sans-serif;
         display: inline-block;
@@ -74,7 +74,7 @@ main #presentation {
   justify-content: center;
   margin: 0 auto; }
 main #presentation {
-  height: 880px; }
+  min-height: 880px; }
   main #presentation .container-parallax {
     display: flex;
     flex: 3;
@@ -114,7 +114,7 @@ main #presentation {
         border: 2px solid #262626;
         background-color: #262626; }
 main #restaurant {
-  height: 880px; }
+  min-height: 880px; }
   main #restaurant .section-title {
     width: 100%;
     text-align: center;
@@ -137,15 +137,15 @@ main #restaurant {
         main #restaurant .restaurant-items .restaurant-item .description h3 {
           display: inline-block; }
 main #menu {
-  height: 880px; }
+  min-height: 880px; }
   main #menu .container-parallax {
     display: flex;
-    flex: 3;
+    flex: initial;
     flex-flow: row wrap;
     justify-content: center;
     margin: 0 auto;
     background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.8)), url("../img/Carpaccio-Parma-ham-pizza_1903x1269.png");
-    height: 880px;
+    height: -webkit-fill-available;
     /* Parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
@@ -157,18 +157,29 @@ main #menu {
       height: fit-content;
       border-top: 8px solid #262626; }
     main #menu .container-parallax .item-container {
+      display: flex;
+      flex: initial;
+      flex-flow: row wrap;
+      justify-content: center;
+      margin: 0 auto;
       width: fit-content;
-      margin: auto; }
+      margin: 0 auto; }
       main #menu .container-parallax .item-container .menu-item {
-        display: inline-block;
+        display: flex;
+        flex: initial;
+        flex-flow: row wrap;
+        justify-content: center;
+        margin: 0 auto;
         width: 500px;
         height: 500px;
-        margin: 150px 0;
-        background-image: url("../img/custom-img/diamond_thiner_border_white_bg_black_opacity30_500x500.png"); }
+        margin: 0;
+        background-image: url("../img/custom-img/diamond_thiner_border_white_bg_black_opacity30_500x500.png");
+        background-repeat: no-repeat;
+        background-size: contain; }
         main #menu .container-parallax .item-container .menu-item .carte, main #menu .container-parallax .item-container .menu-item .emporter {
           text-align: center;
           height: auto;
-          margin: 220px auto; }
+          margin: auto; }
           main #menu .container-parallax .item-container .menu-item .carte a, main #menu .container-parallax .item-container .menu-item .emporter a {
             cursor: pointer;
             color: white;

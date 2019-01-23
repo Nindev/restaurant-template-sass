@@ -85,7 +85,10 @@ main #order-menu {
     main #order-menu .container-parallax .menu {
       background-color: white;
       height: 800px;
-      margin: 100px auto 0; }
+      margin: 100px auto 0;
+      overflow-y: overlay;
+      border: 8px solid #262626;
+      box-sizing: border-box; }
       main #order-menu .container-parallax .menu #menu-nav {
         height: auto; }
         main #order-menu .container-parallax .menu #menu-nav ul.menu-type {
@@ -131,26 +134,83 @@ main #order-menu {
                 color: red; }
               main #order-menu .container-parallax .menu #menu-nav ul.nav-list li.nav-list-item a:active {
                 color: red; }
-      main #order-menu .container-parallax .menu .menu-container #carte,
-      main #order-menu .container-parallax .menu .menu-container #emporter {
-        width: 100%;
-        height: auto; }
-        main #order-menu .container-parallax .menu .menu-container #carte a,
-        main #order-menu .container-parallax .menu .menu-container #emporter a {
-          text-decoration: none;
-          color: white; }
-          main #order-menu .container-parallax .menu .menu-container #carte a:visited,
-          main #order-menu .container-parallax .menu .menu-container #emporter a:visited {
+      main #order-menu .container-parallax .menu .menu-container {
+        padding: 20px; }
+        main #order-menu .container-parallax .menu .menu-container #carte,
+        main #order-menu .container-parallax .menu .menu-container #emporter {
+          width: 100%;
+          height: auto; }
+          main #order-menu .container-parallax .menu .menu-container #carte a,
+          main #order-menu .container-parallax .menu .menu-container #emporter a {
+            text-decoration: none;
             color: white; }
-          main #order-menu .container-parallax .menu .menu-container #carte a:hover,
-          main #order-menu .container-parallax .menu .menu-container #emporter a:hover {
-            color: white; }
-          main #order-menu .container-parallax .menu .menu-container #carte a:active,
-          main #order-menu .container-parallax .menu .menu-container #emporter a:active {
-            color: white; }
-        main #order-menu .container-parallax .menu .menu-container #carte .menu-title,
-        main #order-menu .container-parallax .menu .menu-container #emporter .menu-title {
-          text-align: center; }
+            main #order-menu .container-parallax .menu .menu-container #carte a:visited,
+            main #order-menu .container-parallax .menu .menu-container #emporter a:visited {
+              color: white; }
+            main #order-menu .container-parallax .menu .menu-container #carte a:hover,
+            main #order-menu .container-parallax .menu .menu-container #emporter a:hover {
+              color: white; }
+            main #order-menu .container-parallax .menu .menu-container #carte a:active,
+            main #order-menu .container-parallax .menu .menu-container #emporter a:active {
+              color: white; }
+          main #order-menu .container-parallax .menu .menu-container #carte .formule, main #order-menu .container-parallax .menu .menu-container #carte .entree, main #order-menu .container-parallax .menu .menu-container #carte .pizza, main #order-menu .container-parallax .menu .menu-container #carte .pasta, main #order-menu .container-parallax .menu .menu-container #carte .specialite, main #order-menu .container-parallax .menu .menu-container #carte .dessert,
+          main #order-menu .container-parallax .menu .menu-container #emporter .formule,
+          main #order-menu .container-parallax .menu .menu-container #emporter .entree,
+          main #order-menu .container-parallax .menu .menu-container #emporter .pizza,
+          main #order-menu .container-parallax .menu .menu-container #emporter .pasta,
+          main #order-menu .container-parallax .menu .menu-container #emporter .specialite,
+          main #order-menu .container-parallax .menu .menu-container #emporter .dessert {
+            padding: 20px 0; }
+          main #order-menu .container-parallax .menu .menu-container #carte .menu-title,
+          main #order-menu .container-parallax .menu .menu-container #emporter .menu-title {
+            text-align: center;
+            margin: 0;
+            padding: 0; }
+          main #order-menu .container-parallax .menu .menu-container #carte .formule,
+          main #order-menu .container-parallax .menu .menu-container #emporter .formule {
+            width: fit-content;
+            margin: auto; }
+            main #order-menu .container-parallax .menu .menu-container #carte .formule .formule-item,
+            main #order-menu .container-parallax .menu .menu-container #emporter .formule .formule-item {
+              text-align: center;
+              display: inline-block;
+              margin: 0 100px;
+              min-height: 50px; }
+          main #order-menu .container-parallax .menu .menu-container #carte .pizza,
+          main #order-menu .container-parallax .menu .menu-container #emporter .pizza {
+            width: max-content;
+            margin: 0 auto;
+            width: 75%; }
+            main #order-menu .container-parallax .menu .menu-container #carte .pizza .pizza-items ul.pizza-items-list,
+            main #order-menu .container-parallax .menu .menu-container #emporter .pizza .pizza-items ul.pizza-items-list {
+              margin: 0;
+              padding: 0;
+              list-style: none; }
+              main #order-menu .container-parallax .menu .menu-container #carte .pizza .pizza-items ul.pizza-items-list .pizza-item,
+              main #order-menu .container-parallax .menu .menu-container #emporter .pizza .pizza-items ul.pizza-items-list .pizza-item {
+                text-align: justify;
+                min-height: 40px; }
+                main #order-menu .container-parallax .menu .menu-container #carte .pizza .pizza-items ul.pizza-items-list .pizza-item span.pizza-price,
+                main #order-menu .container-parallax .menu .menu-container #emporter .pizza .pizza-items ul.pizza-items-list .pizza-item span.pizza-price {
+                  float: right; }
+          main #order-menu .container-parallax .menu .menu-container #carte .entree,
+          main #order-menu .container-parallax .menu .menu-container #emporter .entree {
+            margin: 20px 0 0;
+            width: max-content;
+            margin: 0 auto;
+            width: 75%; }
+            main #order-menu .container-parallax .menu .menu-container #carte .entree .entree-items ul.entree-items-list,
+            main #order-menu .container-parallax .menu .menu-container #emporter .entree .entree-items ul.entree-items-list {
+              margin: 0;
+              padding: 0;
+              list-style: none; }
+              main #order-menu .container-parallax .menu .menu-container #carte .entree .entree-items ul.entree-items-list .entree-item,
+              main #order-menu .container-parallax .menu .menu-container #emporter .entree .entree-items ul.entree-items-list .entree-item {
+                text-align: justify;
+                min-height: 40px; }
+                main #order-menu .container-parallax .menu .menu-container #carte .entree .entree-items ul.entree-items-list .entree-item span.entree-price,
+                main #order-menu .container-parallax .menu .menu-container #emporter .entree .entree-items ul.entree-items-list .entree-item span.entree-price {
+                  float: right; }
 main footer {
   background-color: #262626;
   color: white;
