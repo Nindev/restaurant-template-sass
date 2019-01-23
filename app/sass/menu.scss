@@ -1,0 +1,382 @@
+@import url('https://fonts.googleapis.com/css?family=EB+Garamond|Josefin+Sans|Vollkorn');
+
+/*******************/
+/**** $Variable ****/
+/*******************/
+// color
+$green: green;
+$white: white;
+$red: red;
+$dark: #333;
+
+// fonts
+$title-font: 'Josefin Sans',
+'Vollkorn',
+'EB Garamond',
+sans-serif;
+$default-font: 'EB Garamond', sans-serif;
+$nav-font: 'Josefin Sans',
+'Vollkorn',
+'EB Garamond',
+sans-serif;
+
+// text decoration
+$underline: underline;
+
+// width
+$col-3: 33.33%;
+$col-6: 50%;
+$col-12: 100%;
+
+// height
+$section-height: 935px;
+$section-title-height: 20px;
+
+/*****************/
+/**** @Mixins ****/
+/*****************/
+// Background styles
+@mixin dark-bg {
+  background-color: darken($dark, 5%);
+}
+
+@mixin white-bg {
+  background-color: $white;
+}
+
+// Spacings
+@mixin no-spacing {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin center-block {
+  margin: 0 auto;
+}
+
+// Block styles
+@mixin container {
+  display: block;
+  width: 100%;
+}
+
+// Flex designs
+@mixin flex-start {
+  display: flex;
+  flex: 3;
+  flex-flow: row wrap;
+  align-content: flex-start;
+}
+
+@mixin flex-center {
+  display: flex;
+  flex: 3;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+// Title styles
+@mixin section-title {
+  width: 100%;
+  text-align: center;
+  height: fit-content;
+  border-top: 8px solid #262626;
+}
+
+@mixin footer-title {
+  width: 100%;
+  height: fit-content;
+  border-top: 8px solid #262626;
+}
+
+// Text dispositions
+@mixin text-align-center {
+  text-align: center;
+}
+
+// Button styles
+@mixin home-btn-display-menu {
+  color: $dark;
+  padding: 25px;
+  font-size: 15px;
+  font-weight: 600;
+  border: 2px solid $dark;
+  background-color: transparent;
+  // font-family: 'EB Garamond', sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@mixin btn-display-menu {
+  // color: $dark;
+  color: $white;
+  padding: 15px;
+  font-size: 15px;
+  font-weight: 600;
+  // border: 2px solid $dark;
+  border: 2px solid $white;
+  background-color: transparent;
+  text-transform: uppercase;
+  // font-family: 'EB Garamond', sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+// Link styles
+@mixin linx($link, $visit, $hover, $active) {
+  a {
+    text-decoration: none;
+    color: $link;
+
+    &:visited {
+      color: $visit;
+    }
+
+    &:hover {
+      color: $hover;
+      // text-decoration: $underline;
+    }
+
+    &:active {
+      color: $active;
+    }
+  }
+}
+
+@mixin linx-menu-type($link, $visit, $hover, $active) {
+  a {
+    color: $link;
+    width: $col-6;
+    font-size: 20px;
+    text-decoration: none;
+    font-family: $title-font;
+
+    &:visited {
+      color: $visit;
+    }
+
+    &:hover {
+      color: $hover;
+      // text-decoration: $underline;
+    }
+
+    &:active {
+      color: $active;
+    }
+  }
+}
+
+html,
+body {
+  @include no-spacing;
+
+  width: 100%;
+  height: 100%;
+}
+
+#wrapper {
+  width: 100%;
+}
+
+header {
+  @include no-spacing;
+  @include dark-bg;
+
+  width: $col-12;
+  height: 55px;
+  position: fixed;
+
+  #main-nav {
+    @include flex-center;
+
+    height: inherit;
+
+    ul.nav-list {
+      @include no-spacing;
+      color: $white;
+      list-style: none;
+
+      .nav-list-item {
+        // $link, $visit, $hover, $active
+        @include linx($white, $white, $green, $green);
+
+        font-family: $nav-font;
+        display: inline-block;
+        margin: 20px 50px;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+main,
+footer {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-family: $title-font;
+  }
+}
+
+main {
+  a {
+    cursor: pointer;
+  }
+
+  section {
+    clear: both;
+    width: $col-12;
+    height: $section-height;
+    box-sizing: content-box;
+
+    // h2 {
+    //   height: auto;
+    //   // font-size: 35px;
+    //   display: inline-block;
+    //   background-color: darken($dark, 5%);
+    //   padding: 20px 30px;
+    //   margin: 0;
+    //   color: $white;
+    // }
+  }
+
+  // Menu
+  #order-menu {
+    height: $section-height;
+
+    .container-parallax {
+      @include flex-center;
+      @include center-block;
+
+      background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.8)), url("../img/Carpaccio-Parma-ham-pizza_1903x1269.png");
+
+      height: $section-height;
+
+      /* Parallax scrolling effect */
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      
+      .menu {
+        @include white-bg;
+        height: 800px;
+        margin: 100px auto 0;
+        
+        #menu-nav {
+          // @include flex-center;
+          
+          height: auto;
+          
+          ul.menu-type {
+            // @include flex-center;
+            @include white-bg;
+            @include no-spacing;
+            @include text-align-center;
+            list-style: none;
+
+            li.nav-list-item {
+              // $link, $visit, $hover, $active
+              @include linx-menu-type($dark, $dark, $dark, $dark);
+
+              font-family: $nav-font;
+              display: inline-block;
+              padding: 20px 50px;
+              text-transform: uppercase;
+            }
+          }
+
+          ul.nav-list {
+            @include dark-bg;
+            @include no-spacing;
+            color: $white;
+            list-style: none;
+            
+            li.nav-list-item {
+              // $link, $visit, $hover, $active
+              @include linx($white, $white, $red, $red);
+
+              font-family: $nav-font;
+              display: inline-block;
+              padding: 20px 50px;
+              text-transform: uppercase;
+            }
+          }
+        }
+
+        .menu-container {
+          #carte,
+          #emporter {
+            // $link, $visit, $hover, $active
+            @include linx($white, $white, $white, $white);
+            
+            width: $col-12;
+            height: auto;
+            .menu-title {
+              @include text-align-center;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    @include dark-bg;
+
+    color: $white;
+    height: 300px;
+    padding: 30px;
+
+    .footer-title {
+      @include footer-title;
+      @include no-spacing;
+    }
+
+    .left {
+      .social {
+        width: 100%;
+        padding: 10px;
+
+        .link {
+          display: inline-block;
+          vertical-align: middle;
+          position: relative;
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          border: 2px dashed white;
+          background-clip: content-box;
+          padding: 10px;
+          transition: .5s;
+          color: #D7D0BE;
+          margin-left: 15px;
+          margin-right: 15px;
+          font-size: 2em;
+
+          &:hover {
+            // padding: 20px;
+            color: white;
+            border-radius: 0;
+            border: 2px solid white;
+            transform: translateY(-10px) rotate(360deg);
+          }
+
+          span {
+            color: $white;
+
+            display: block;
+            position: absolute;
+            text-align: center;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+
+
+        }
+      }
+    }
+  }
+}

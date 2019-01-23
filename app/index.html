@@ -7,6 +7,7 @@
   <title>Restaurant Template</title>
 
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 </head>
 <body>
   <div id="wrapper">
@@ -14,7 +15,7 @@
       <!-- <div id="logo"><a href="#">O'VESUVIO</a></div> -->
       <nav id="main-nav">
         <ul class="nav-list">
-          <li class="nav-list-item"><a href="#logo">Accueil</a></li>
+          <li class="nav-list-item"><a href="#presentation">Accueil</a></li>
           <li class="nav-list-item"><a href="#restaurant">Restaurant</a></li>
           <li class="nav-list-item"><a href="#menu">Menu</a></li>
           <li class="nav-list-item"><a href="#contact">Contact</a></li>
@@ -28,7 +29,7 @@
             <h1>O'VESUVIO</h1>
             <p class="subtitle"><strong>Pizza cuite au feu de bois</strong></p>
             <p class="phoneNumber"><strong>01 69 51 13 13</strong></p>
-            <button class="btn-display-menu">CONSULTER LE MENU</button>
+            <p><a class="btn-display-menu" href="menu.html">COMMANDER</a></p>
           </div>
         </div>
       </section>
@@ -68,14 +69,14 @@
           <div class="item-container">
             <div class="menu-item">
               <div class="carte">
-                <h3>A LA CARTE</h3>
-                <button class="btn-display-menu">Voir le menu</button>
+                <h3>À LA CARTE</h3>
+                <a href="menu.html#carte" class="btn-display-menu">Voir le menu</a>
               </div>
             </div>
             <div class="menu-item">
-              <div class="livraison">
-                <h3>LIVRAISON</h3>
-                <button class="btn-display-menu">Voir le menu</button>
+              <div class="emporter">
+                <h3>À EMPORTER</h3>
+                <a href="menu.html#emporter" class="btn-display-menu">Voir le menu</a>
               </div>
             </div>
           </div>
@@ -86,41 +87,56 @@
           <h2>Contact</h2>
         </div>
         <div class="item-container">
-          <div class="contact-item adress">
-            <div class="descr">
-              <h3>Adresse</h3>
-              <p>134 Route de Corbeil</p>
-              <p>91360 Villemoisson-sur-Orge</p>
+          <div class="contact-item">
+            <div class="adress">
+              <div class="descr">
+                <h3>Adresse</h3>
+                <p>134 Route de Corbeil</p>
+                <p>91360 Villemoisson-sur-Orge</p>
+              </div>
             </div>
           </div>
-          <div class="contact-item horaires">
-            <div class="descr">
-              <h3>Heures d'ouverture</h3>
-              <p>Lundi au Jeudi : 12H-14H et 19H-22H</p>
-              <p>Vendredi et Samedi : 12H-14H, 19H-22H30</p>
-              <p>Dimanche : Fermé</p>
+          <div class="contact-item">
+            <div class="horaires">
+              <div class="descr">
+                <h3>Heures d'ouverture</h3>
+                <p>Lundi au Jeudi : 12H-14H et 19H-22H</p>
+                <p>Vendredi et Samedi : 12H-14H, 19H-22H30</p>
+                <p>Dimanche : Fermé</p>
+              </div>
             </div>
           </div>
-          <div class="contact-item maps">
-              <div id="map"></div>
-          </div>
+          <!-- <div class="contact-item">
+              <div class="map" id="map"></div>
+          </div> -->
         </div>
       </section>
     </main>
     <footer>
-      <div class="logo">O'VESUVIO</div>
-      <div class="feedback">
-        <h4>Avis de la clientèle</h4>
-        <div class="feedback-item">
-          <p>"Consequat aliquip laboris commodo non nostrud aliqua dolor eiusmod."</p>
+      <div class="footer-title">
+        <h2>O'VESUVIO</h2>
+      </div>
+      <div class="left">
+        <div class="feedback">
+          <h3>Avis de la clientèle</h3>
+          <div class="feedback-item">
+            <p>"Consequat aliquip laboris commodo non nostrud aliqua dolor eiusmod."</p>
+          </div>
+          <div class="feedback-item">
+            <p>"Consequat aliquip laboris commodo non nostrud aliqua dolor eiusmod."</p>
+          </div>
         </div>
-        <div class="feedback-item">
-          <p>"Consequat aliquip laboris commodo non nostrud aliqua dolor eiusmod."</p>
+        <div class="social">
+          <a class="link" target="_blank" href="#"><span><i class="fab fa-tripadvisor"></i></span></a>
+          <a class="link" target="_blank" href="#"><span><i class="fab fa-facebook"></i></span></a>
+          <a class="link" target="_blank" href="#"><span><i class="fab fa-twitter"></i></span></a>
+        </div>
+        <div class="copyright">
+          <p>O'VESUVIO &copy; Copyright 2019 par NINDEV</p>
         </div>
       </div>
-      <div class="social">
-        <a href=""><img src="" alt="Facebook"></a>
-        <a href=""><img src="" alt="TripAdvisor"></a>
+      <div class="right">
+          <div id="map"></div>
       </div>
     </footer>
   </div>

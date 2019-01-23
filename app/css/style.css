@@ -17,17 +17,15 @@ html, body {
 header {
   margin: 0;
   padding: 0;
-  height: 55px; }
-  header #logo {
-    text-align: center; }
+  background-color: #262626;
+  width: 100%;
+  height: 55px;
+  position: fixed; }
   header #main-nav {
-    width: 100%;
-    background-color: #262626;
     display: flex;
     flex: 3;
     flex-flow: row wrap;
     justify-content: center;
-    position: fixed;
     height: inherit; }
     header #main-nav ul.nav-list {
       margin: 0;
@@ -40,8 +38,9 @@ header {
         margin: 20px 50px;
         text-transform: uppercase; }
         header #main-nav ul.nav-list .nav-list-item a {
-          text-decoration: none;
-          color: white; }
+          cursor: pointer;
+          color: white;
+          text-decoration: none; }
           header #main-nav ul.nav-list .nav-list-item a:visited {
             color: white; }
           header #main-nav ul.nav-list .nav-list-item a:hover {
@@ -57,126 +56,210 @@ main button {
 main section {
   clear: both;
   width: 100%;
-  height: 880px;
   box-sizing: content-box; }
-  main section h2 {
+  main section .section-title h2 {
     height: auto;
-    font-size: 35px;
     display: inline-block;
     background-color: #262626;
     padding: 20px 30px;
     margin: 0;
     color: white; }
+  main section p {
+    font-weight: 500;
+    font-size: 18px; }
 main #presentation {
   display: flex;
   flex: 3;
   flex-flow: row wrap;
   justify-content: center;
   margin: 0 auto; }
-main #presentation .container-parallax {
-  display: flex;
-  flex: 3;
-  flex-flow: row wrap;
-  justify-content: center;
-  margin: 0 auto;
-  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.8)), url("../img/Carpaccio-Parma-ham-pizza_1903x1269.png");
-  height: 880px;
-  /* Parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; }
-  main #presentation .container-parallax .restaurant-title {
-    text-align: center;
-    margin: auto;
-    color: #262626; }
-    main #presentation .container-parallax .restaurant-title h1 {
-      font-size: 80px; }
-    main #presentation .container-parallax .restaurant-title p {
-      font-size: 30px; }
-    main #presentation .container-parallax .restaurant-title .subtitle {
-      font-family: 'Vollkorn', 'EB Garamond', sans-serif; }
-    main #presentation .container-parallax .restaurant-title .phoneNumber {
-      font-family: "EB Garamond", sans-serif; }
-    main #presentation .container-parallax .restaurant-title .btn-display-menu {
-      color: #333;
-      padding: 25px;
-      font-size: 15px;
-      font-weight: 600;
-      border: 2px solid #333;
-      background-color: transparent;
-      font-family: 'EB Garamond', sans-serif; }
-    main #presentation .container-parallax .restaurant-title .btn-display-menu:hover {
-      color: white;
-      font-weight: bold;
-      border: 2px solid #262626;
-      background-color: #262626; }
-main #restaurant .section-title {
-  width: 100%;
-  text-align: center;
-  height: fit-content;
-  border-top: 8px solid #262626; }
-main #restaurant .restaurant-items {
-  width: fit-content;
-  margin: auto; }
-  main #restaurant .restaurant-items .restaurant-item {
-    display: inline-grid;
-    margin: 150px 70px; }
-    main #restaurant .restaurant-items .restaurant-item img {
-      display: inline-block;
-      overflow: hidden;
-      width: 300px; }
-    main #restaurant .restaurant-items .restaurant-item .description {
-      height: 202.5px;
-      width: 300px; }
-      main #restaurant .restaurant-items .restaurant-item .description h3 {
-        display: inline-block; }
-main #menu .container-parallax {
-  display: flex;
-  flex: 3;
-  flex-flow: row wrap;
-  justify-content: center;
-  margin: 0 auto;
-  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.8)), url("../img/Carpaccio-Parma-ham-pizza_1903x1269.png");
-  height: 880px;
-  /* Parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; }
-  main #menu .container-parallax .section-title {
+main #presentation {
+  height: 880px; }
+  main #presentation .container-parallax {
+    display: flex;
+    flex: 3;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 0 auto;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.8)), url("../img/Carpaccio-Parma-ham-pizza_1903x1269.png");
+    /* Parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; }
+    main #presentation .container-parallax .restaurant-title {
+      text-align: center;
+      margin: auto;
+      color: #262626; }
+      main #presentation .container-parallax .restaurant-title h1 {
+        font-size: 80px; }
+      main #presentation .container-parallax .restaurant-title p {
+        font-size: 30px; }
+      main #presentation .container-parallax .restaurant-title .subtitle {
+        font-family: 'Vollkorn', 'EB Garamond', sans-serif; }
+      main #presentation .container-parallax .restaurant-title .phoneNumber {
+        font-size: 40px; }
+      main #presentation .container-parallax .restaurant-title .btn-display-menu {
+        color: #333;
+        padding: 25px;
+        font-size: 15px;
+        font-weight: 600;
+        text-decoration: none;
+        border: 2px solid #333;
+        background-color: transparent;
+        font-family: 'EB Garamond', sans-serif; }
+      main #presentation .container-parallax .restaurant-title .btn-display-menu:hover {
+        color: white;
+        font-weight: bold;
+        border: 2px solid #262626;
+        background-color: #262626; }
+main #restaurant {
+  height: 880px; }
+  main #restaurant .section-title {
     width: 100%;
     text-align: center;
     height: fit-content;
     border-top: 8px solid #262626; }
-  main #menu .container-parallax .item-container {
+  main #restaurant .restaurant-items {
     width: fit-content;
     margin: auto; }
-    main #menu .container-parallax .item-container .menu-item {
-      display: inline-block;
+    main #restaurant .restaurant-items .restaurant-item {
+      display: inline-grid;
+      margin: 150px 50px; }
+      main #restaurant .restaurant-items .restaurant-item img {
+        display: inline-block;
+        overflow: hidden;
+        width: 400px; }
+      main #restaurant .restaurant-items .restaurant-item .description {
+        text-align: justify;
+        height: 202.5px;
+        width: 400px; }
+        main #restaurant .restaurant-items .restaurant-item .description h3 {
+          display: inline-block; }
+main #menu {
+  height: 880px; }
+  main #menu .container-parallax {
+    display: flex;
+    flex: 3;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 0 auto;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.8)), url("../img/Carpaccio-Parma-ham-pizza_1903x1269.png");
+    height: 880px;
+    /* Parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; }
+    main #menu .container-parallax .section-title {
+      width: 100%;
+      text-align: center;
+      height: fit-content;
+      border-top: 8px solid #262626; }
+    main #menu .container-parallax .item-container {
+      width: fit-content;
+      margin: auto; }
+      main #menu .container-parallax .item-container .menu-item {
+        display: inline-block;
+        width: 500px;
+        height: 500px;
+        margin: 150px 0;
+        background-image: url("../img/custom-img/diamond_thiner_border_white_bg_black_opacity30_500x500.png"); }
+        main #menu .container-parallax .item-container .menu-item .carte, main #menu .container-parallax .item-container .menu-item .emporter {
+          text-align: center;
+          height: auto;
+          margin: 220px auto; }
+          main #menu .container-parallax .item-container .menu-item .carte a, main #menu .container-parallax .item-container .menu-item .emporter a {
+            cursor: pointer;
+            color: white;
+            text-decoration: none; }
+            main #menu .container-parallax .item-container .menu-item .carte a:visited, main #menu .container-parallax .item-container .menu-item .emporter a:visited {
+              color: white; }
+            main #menu .container-parallax .item-container .menu-item .carte a:hover, main #menu .container-parallax .item-container .menu-item .emporter a:hover {
+              color: white; }
+            main #menu .container-parallax .item-container .menu-item .carte a:active, main #menu .container-parallax .item-container .menu-item .emporter a:active {
+              color: white; }
+          main #menu .container-parallax .item-container .menu-item .carte h3, main #menu .container-parallax .item-container .menu-item .emporter h3 {
+            color: #333;
+            color: white;
+            font-size: 40px; }
+          main #menu .container-parallax .item-container .menu-item .carte .btn-display-menu, main #menu .container-parallax .item-container .menu-item .emporter .btn-display-menu {
+            padding: 15px;
+            font-size: 15px;
+            font-weight: 600;
+            border: 2px solid white;
+            background-color: transparent;
+            text-transform: uppercase;
+            font-family: Arial, Helvetica, sans-serif; }
+          main #menu .container-parallax .item-container .menu-item .carte .btn-display-menu:hover, main #menu .container-parallax .item-container .menu-item .emporter .btn-display-menu:hover {
+            color: white;
+            font-weight: bold;
+            border: 2px solid #262626;
+            background-color: #262626; }
+main #contact {
+  max-height: 880px; }
+  main #contact .section-title {
+    width: 100%;
+    text-align: center;
+    height: fit-content;
+    border-top: 8px solid #262626; }
+  main #contact .item-container {
+    width: fit-content;
+    margin: auto; }
+    main #contact .item-container .contact-item {
+      display: inline-grid;
       width: 500px;
-      height: 500px;
-      margin: 150px 0;
-      background-image: url("../img/custom-img/diamond_thin_border_white_500x500.png"); }
-      main #menu .container-parallax .item-container .menu-item .carte, main #menu .container-parallax .item-container .menu-item .livraison {
+      margin: 150px 0; }
+      main #contact .item-container .contact-item .adress, main #contact .item-container .contact-item .horaires {
         text-align: center;
-        height: auto;
-        margin: 220px auto; }
-        main #menu .container-parallax .item-container .menu-item .carte h3, main #menu .container-parallax .item-container .menu-item .livraison h3 {
-          color: #333;
-          font-size: 40px; }
-        main #menu .container-parallax .item-container .menu-item .carte .btn-display-menu, main #menu .container-parallax .item-container .menu-item .livraison .btn-display-menu {
-          color: #333;
-          padding: 15px;
-          font-size: 15px;
-          font-weight: 600;
-          border: 2px solid #333;
-          background-color: transparent;
-          font-family: 'EB Garamond', sans-serif; }
-        main #menu .container-parallax .item-container .menu-item .carte .btn-display-menu:hover, main #menu .container-parallax .item-container .menu-item .livraison .btn-display-menu:hover {
-          color: white;
-          font-weight: bold;
-          border: 2px solid #262626;
-          background-color: #262626; }
+        height: auto; }
+
+footer {
+  background-color: #262626;
+  color: white;
+  height: 300px;
+  padding: 30px; }
+  footer p {
+    font-family: "EB Garamond", sans-serif; }
+  footer .footer-title {
+    width: 100%;
+    height: fit-content;
+    border-top: 8px solid #262626;
+    text-align: center;
+    margin: 0;
+    padding: 0; }
+  footer .left .feedback, footer .left .social, footer .left .copyright {
+    text-align: center; }
+  footer .left .social {
+    width: 100%;
+    padding: 10px; }
+    footer .left .social .link {
+      display: inline-block;
+      vertical-align: middle;
+      position: relative;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: 2px dashed white;
+      background-clip: content-box;
+      padding: 10px;
+      transition: .5s;
+      color: #D7D0BE;
+      margin-left: 15px;
+      margin-right: 15px;
+      font-size: 2em; }
+      footer .left .social .link:hover {
+        color: white;
+        border-radius: 0;
+        border: 2px solid white;
+        transform: translateY(-10px) rotate(360deg); }
+      footer .left .social .link span {
+        color: white;
+        display: block;
+        position: absolute;
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); }
 
 /*# sourceMappingURL=style.css.map */
