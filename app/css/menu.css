@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=EB+Garamond|Josefin+Sans|Vollkorn");
+
 /*******************/
 /**** $Variable ****/
 /*******************/
@@ -10,10 +11,12 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 100%; }
+  height: 100%;
+}
 
 #wrapper {
-  width: 100%; }
+  width: 100%;
+}
 
 header {
   margin: 0;
@@ -21,32 +24,47 @@ header {
   background-color: #262626;
   width: 100%;
   height: 55px;
-  position: fixed; }
-  header #main-nav {
-    display: flex;
-    flex: initial;
-    flex-flow: row wrap;
-    justify-content: center;
-    height: inherit; }
-    header #main-nav ul.nav-list {
-      margin: 0;
-      padding: 0;
-      color: white;
-      list-style: none; }
-      header #main-nav ul.nav-list .nav-list-item {
-        font-family: "Josefin Sans", "Vollkorn", "EB Garamond", sans-serif;
-        display: inline-block;
-        margin: 20px 50px;
-        text-transform: uppercase; }
-        header #main-nav ul.nav-list .nav-list-item a {
-          text-decoration: none;
-          color: white; }
-          header #main-nav ul.nav-list .nav-list-item a:visited {
-            color: white; }
-          header #main-nav ul.nav-list .nav-list-item a:hover {
-            color: green; }
-          header #main-nav ul.nav-list .nav-list-item a:active {
-            color: green; }
+  position: fixed;
+}
+
+header #main-nav {
+  display: flex;
+  flex: initial;
+  flex-flow: row wrap;
+  justify-content: center;
+  height: inherit;
+}
+
+header #main-nav ul.nav-list {
+  margin: 0;
+  padding: 0;
+  color: white;
+  list-style: none;
+}
+
+header #main-nav ul.nav-list .nav-list-item {
+  font-family: "Josefin Sans", "Vollkorn", "EB Garamond", sans-serif;
+  display: inline-block;
+  margin: 20px 50px;
+  text-transform: uppercase;
+}
+
+header #main-nav ul.nav-list .nav-list-item a {
+  text-decoration: none;
+  color: white;
+}
+
+header #main-nav ul.nav-list .nav-list-item a:visited {
+  color: white;
+}
+
+header #main-nav ul.nav-list .nav-list-item a:hover {
+  color: green;
+}
+
+header #main-nav ul.nav-list .nav-list-item a:active {
+  color: green;
+}
 
 main h1,
 main h2,
@@ -58,208 +76,303 @@ footer h2,
 footer h3,
 footer h4,
 footer h5 {
-  font-family: "Josefin Sans", "Vollkorn", "EB Garamond", sans-serif; }
+  font-family: "Josefin Sans", "Vollkorn", "EB Garamond", sans-serif;
+}
 
 main a {
-  cursor: pointer; }
+  cursor: pointer;
+}
+
 main section {
   clear: both;
   width: 100%;
   height: 935px;
-  box-sizing: content-box; }
+  box-sizing: content-box;
+}
+
 main #order-menu {
-  height: 935px; }
-  main #order-menu .container-parallax {
-    display: flex;
-    flex: 3;
-    flex-flow: row wrap;
-    justify-content: center;
-    margin: 0 auto;
-    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.8)), url("../img/Carpaccio-Parma-ham-pizza_1903x1269.png");
-    height: 935px;
-    /* Parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover; }
-    main #order-menu .container-parallax .menu {
-      background-color: white;
-      height: 800px;
-      margin: 100px auto 0;
-      overflow-y: overlay;
-      border: 8px solid #262626;
-      box-sizing: border-box; }
-      main #order-menu .container-parallax .menu #menu-nav {
-        height: auto; }
-        main #order-menu .container-parallax .menu #menu-nav ul.menu-type {
-          background-color: white;
-          margin: 0;
-          padding: 0;
-          text-align: center;
-          list-style: none; }
-          main #order-menu .container-parallax .menu #menu-nav ul.menu-type li.menu-type-item {
-            font-family: "Josefin Sans", "Vollkorn", "EB Garamond", sans-serif;
-            display: inline-block;
-            padding: 0 10px;
-            text-transform: uppercase; }
-            main #order-menu .container-parallax .menu #menu-nav ul.menu-type li.menu-type-item a {
-              color: #333;
-              width: 50%;
-              font-size: 20px;
-              text-decoration: none;
-              font-family: "Josefin Sans", "Vollkorn", "EB Garamond", sans-serif; }
-              main #order-menu .container-parallax .menu #menu-nav ul.menu-type li.menu-type-item a:visited {
-                color: #333; }
-              main #order-menu .container-parallax .menu #menu-nav ul.menu-type li.menu-type-item a:hover {
-                color: #333; }
-              main #order-menu .container-parallax .menu #menu-nav ul.menu-type li.menu-type-item a:active {
-                color: #333; }
-            main #order-menu .container-parallax .menu #menu-nav ul.menu-type li.menu-type-item span.arrow-left {
-              font-size: 40px; }
-            main #order-menu .container-parallax .menu #menu-nav ul.menu-type li.menu-type-item span.arrow-right {
-              display: none;
-              font-size: 40px; }
-            main #order-menu .container-parallax .menu #menu-nav ul.menu-type li.menu-type-item .shrink {
-              font-size: 15px; }
-        main #order-menu .container-parallax .menu #menu-nav ul.nav-list {
-          background-color: #262626;
-          margin: 0;
-          padding: 0;
-          text-align: center;
-          color: white;
-          list-style: none; }
-          main #order-menu .container-parallax .menu #menu-nav ul.nav-list li.nav-list-item {
-            font-family: "Josefin Sans", "Vollkorn", "EB Garamond", sans-serif;
-            display: inline-block;
-            padding: 20px 50px;
-            text-transform: uppercase; }
-            main #order-menu .container-parallax .menu #menu-nav ul.nav-list li.nav-list-item a {
-              text-decoration: none;
-              color: white; }
-              main #order-menu .container-parallax .menu #menu-nav ul.nav-list li.nav-list-item a:visited {
-                color: white; }
-              main #order-menu .container-parallax .menu #menu-nav ul.nav-list li.nav-list-item a:hover {
-                color: red; }
-              main #order-menu .container-parallax .menu #menu-nav ul.nav-list li.nav-list-item a:active {
-                color: red; }
-      main #order-menu .container-parallax .menu .menu-container {
-        padding: 20px; }
-        main #order-menu .container-parallax .menu .menu-container #carte,
-        main #order-menu .container-parallax .menu .menu-container #emporter {
-          width: 100%;
-          height: auto; }
-          main #order-menu .container-parallax .menu .menu-container #carte a,
-          main #order-menu .container-parallax .menu .menu-container #emporter a {
-            text-decoration: none;
-            color: white; }
-            main #order-menu .container-parallax .menu .menu-container #carte a:visited,
-            main #order-menu .container-parallax .menu .menu-container #emporter a:visited {
-              color: white; }
-            main #order-menu .container-parallax .menu .menu-container #carte a:hover,
-            main #order-menu .container-parallax .menu .menu-container #emporter a:hover {
-              color: white; }
-            main #order-menu .container-parallax .menu .menu-container #carte a:active,
-            main #order-menu .container-parallax .menu .menu-container #emporter a:active {
-              color: white; }
-          main #order-menu .container-parallax .menu .menu-container #carte .formule, main #order-menu .container-parallax .menu .menu-container #carte .entree, main #order-menu .container-parallax .menu .menu-container #carte .pizza, main #order-menu .container-parallax .menu .menu-container #carte .pasta, main #order-menu .container-parallax .menu .menu-container #carte .specialite, main #order-menu .container-parallax .menu .menu-container #carte .dessert,
-          main #order-menu .container-parallax .menu .menu-container #emporter .formule,
-          main #order-menu .container-parallax .menu .menu-container #emporter .entree,
-          main #order-menu .container-parallax .menu .menu-container #emporter .pizza,
-          main #order-menu .container-parallax .menu .menu-container #emporter .pasta,
-          main #order-menu .container-parallax .menu .menu-container #emporter .specialite,
-          main #order-menu .container-parallax .menu .menu-container #emporter .dessert {
-            padding: 20px 0; }
-          main #order-menu .container-parallax .menu .menu-container #carte .menu-title,
-          main #order-menu .container-parallax .menu .menu-container #emporter .menu-title {
-            text-align: center;
-            margin: 0;
-            padding: 0; }
-          main #order-menu .container-parallax .menu .menu-container #carte .formule,
-          main #order-menu .container-parallax .menu .menu-container #emporter .formule {
-            width: fit-content;
-            margin: auto; }
-            main #order-menu .container-parallax .menu .menu-container #carte .formule .formule-item,
-            main #order-menu .container-parallax .menu .menu-container #emporter .formule .formule-item {
-              text-align: center;
-              display: inline-block;
-              margin: 0 100px;
-              min-height: 50px; }
-          main #order-menu .container-parallax .menu .menu-container #carte .pizza,
-          main #order-menu .container-parallax .menu .menu-container #emporter .pizza {
-            width: max-content;
-            margin: 0 auto;
-            width: 75%; }
-            main #order-menu .container-parallax .menu .menu-container #carte .pizza .pizza-items ul.pizza-items-list,
-            main #order-menu .container-parallax .menu .menu-container #emporter .pizza .pizza-items ul.pizza-items-list {
-              margin: 0;
-              padding: 0;
-              list-style: none; }
-              main #order-menu .container-parallax .menu .menu-container #carte .pizza .pizza-items ul.pizza-items-list .pizza-item,
-              main #order-menu .container-parallax .menu .menu-container #emporter .pizza .pizza-items ul.pizza-items-list .pizza-item {
-                text-align: justify;
-                min-height: 40px; }
-                main #order-menu .container-parallax .menu .menu-container #carte .pizza .pizza-items ul.pizza-items-list .pizza-item span.pizza-price,
-                main #order-menu .container-parallax .menu .menu-container #emporter .pizza .pizza-items ul.pizza-items-list .pizza-item span.pizza-price {
-                  float: right; }
-          main #order-menu .container-parallax .menu .menu-container #carte .entree,
-          main #order-menu .container-parallax .menu .menu-container #emporter .entree {
-            margin: 20px 0 0;
-            width: max-content;
-            margin: 0 auto;
-            width: 75%; }
-            main #order-menu .container-parallax .menu .menu-container #carte .entree .entree-items ul.entree-items-list,
-            main #order-menu .container-parallax .menu .menu-container #emporter .entree .entree-items ul.entree-items-list {
-              margin: 0;
-              padding: 0;
-              list-style: none; }
-              main #order-menu .container-parallax .menu .menu-container #carte .entree .entree-items ul.entree-items-list .entree-item,
-              main #order-menu .container-parallax .menu .menu-container #emporter .entree .entree-items ul.entree-items-list .entree-item {
-                text-align: justify;
-                min-height: 40px; }
-                main #order-menu .container-parallax .menu .menu-container #carte .entree .entree-items ul.entree-items-list .entree-item span.entree-price,
-                main #order-menu .container-parallax .menu .menu-container #emporter .entree .entree-items ul.entree-items-list .entree-item span.entree-price {
-                  float: right; }
+  height: 935px;
+}
+
+main #order-menu .container-parallax {
+  display: flex;
+  flex: 3;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 0 auto;
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.8)), url("../img/Carpaccio-Parma-ham-pizza_1903x1269.png");
+  height: 935px;
+  /* Parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+main #order-menu .container-parallax .menu {
+  background-color: white;
+  height: 800px;
+  margin: 100px auto 0;
+  overflow-y: overlay;
+  border: 8px solid #262626;
+  box-sizing: border-box;
+}
+
+main #order-menu .container-parallax .menu #menu-nav {
+  height: auto;
+}
+
+main #order-menu .container-parallax .menu #menu-nav ul.menu-type {
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  list-style: none;
+}
+
+main #order-menu .container-parallax .menu #menu-nav ul.menu-type li.menu-type-item {
+  font-family: "Josefin Sans", "Vollkorn", "EB Garamond", sans-serif;
+  display: inline-block;
+  padding: 0 10px;
+  text-transform: uppercase;
+}
+
+main #order-menu .container-parallax .menu #menu-nav ul.menu-type li.menu-type-item a {
+  color: #333;
+  width: 50%;
+  font-size: 20px;
+  text-decoration: none;
+  font-family: "Josefin Sans", "Vollkorn", "EB Garamond", sans-serif;
+}
+
+main #order-menu .container-parallax .menu #menu-nav ul.menu-type li.menu-type-item a:visited {
+  color: #333;
+}
+
+main #order-menu .container-parallax .menu #menu-nav ul.menu-type li.menu-type-item a:hover {
+  color: #333;
+}
+
+main #order-menu .container-parallax .menu #menu-nav ul.menu-type li.menu-type-item a:active {
+  color: #333;
+}
+
+main #order-menu .container-parallax .menu #menu-nav ul.menu-type li.menu-type-item span.arrow-left {
+  font-size: 40px;
+}
+
+main #order-menu .container-parallax .menu #menu-nav ul.menu-type li.menu-type-item span.arrow-right {
+  display: none;
+  font-size: 40px;
+}
+
+main #order-menu .container-parallax .menu #menu-nav ul.menu-type li.menu-type-item .shrink {
+  font-size: 15px;
+}
+
+main #order-menu .container-parallax .menu #menu-nav ul.nav-list {
+  background-color: #262626;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: white;
+  list-style: none;
+}
+
+main #order-menu .container-parallax .menu #menu-nav ul.nav-list li.nav-list-item {
+  font-family: "Josefin Sans", "Vollkorn", "EB Garamond", sans-serif;
+  display: inline-block;
+  padding: 20px 50px;
+  text-transform: uppercase;
+}
+
+main #order-menu .container-parallax .menu #menu-nav ul.nav-list li.nav-list-item a {
+  text-decoration: none;
+  color: white;
+}
+
+main #order-menu .container-parallax .menu #menu-nav ul.nav-list li.nav-list-item a:visited {
+  color: white;
+}
+
+main #order-menu .container-parallax .menu #menu-nav ul.nav-list li.nav-list-item a:hover {
+  color: red;
+}
+
+main #order-menu .container-parallax .menu #menu-nav ul.nav-list li.nav-list-item a:active {
+  color: red;
+}
+
+main #order-menu .container-parallax .menu .menu-container {
+  padding: 20px;
+}
+
+main #order-menu .container-parallax .menu .menu-container #carte,
+main #order-menu .container-parallax .menu .menu-container #emporter {
+  width: 100%;
+  height: auto;
+}
+
+main #order-menu .container-parallax .menu .menu-container #carte a,
+main #order-menu .container-parallax .menu .menu-container #emporter a {
+  text-decoration: none;
+  color: white;
+}
+
+main #order-menu .container-parallax .menu .menu-container #carte a:visited,
+main #order-menu .container-parallax .menu .menu-container #emporter a:visited {
+  color: white;
+}
+
+main #order-menu .container-parallax .menu .menu-container #carte a:hover,
+main #order-menu .container-parallax .menu .menu-container #emporter a:hover {
+  color: white;
+}
+
+main #order-menu .container-parallax .menu .menu-container #carte a:active,
+main #order-menu .container-parallax .menu .menu-container #emporter a:active {
+  color: white;
+}
+
+main #order-menu .container-parallax .menu .menu-container #carte .formule,
+main #order-menu .container-parallax .menu .menu-container #carte .entree,
+main #order-menu .container-parallax .menu .menu-container #carte .pizza,
+main #order-menu .container-parallax .menu .menu-container #carte .pasta,
+main #order-menu .container-parallax .menu .menu-container #carte .specialite,
+main #order-menu .container-parallax .menu .menu-container #carte .dessert,
+main #order-menu .container-parallax .menu .menu-container #emporter .formule,
+main #order-menu .container-parallax .menu .menu-container #emporter .entree,
+main #order-menu .container-parallax .menu .menu-container #emporter .pizza,
+main #order-menu .container-parallax .menu .menu-container #emporter .pasta,
+main #order-menu .container-parallax .menu .menu-container #emporter .specialite,
+main #order-menu .container-parallax .menu .menu-container #emporter .dessert {
+  padding: 20px 0;
+}
+
+main #order-menu .container-parallax .menu .menu-container #carte .menu-title,
+main #order-menu .container-parallax .menu .menu-container #emporter .menu-title {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+main #order-menu .container-parallax .menu .menu-container #carte .formule,
+main #order-menu .container-parallax .menu .menu-container #emporter .formule {
+  width: fit-content;
+  margin: auto;
+}
+
+main #order-menu .container-parallax .menu .menu-container #carte .formule .formule-item,
+main #order-menu .container-parallax .menu .menu-container #emporter .formule .formule-item {
+  text-align: center;
+  display: inline-block;
+  margin: 0 100px;
+  min-height: 50px;
+}
+
+main #order-menu .container-parallax .menu .menu-container #carte .pizza,
+main #order-menu .container-parallax .menu .menu-container #emporter .pizza {
+  width: max-content;
+  margin: 0 auto;
+  width: 75%;
+}
+
+main #order-menu .container-parallax .menu .menu-container #carte .pizza .pizza-items ul.pizza-items-list,
+main #order-menu .container-parallax .menu .menu-container #emporter .pizza .pizza-items ul.pizza-items-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+main #order-menu .container-parallax .menu .menu-container #carte .pizza .pizza-items ul.pizza-items-list .pizza-item,
+main #order-menu .container-parallax .menu .menu-container #emporter .pizza .pizza-items ul.pizza-items-list .pizza-item {
+  text-align: justify;
+  min-height: 40px;
+}
+
+main #order-menu .container-parallax .menu .menu-container #carte .pizza .pizza-items ul.pizza-items-list .pizza-item span.pizza-price,
+main #order-menu .container-parallax .menu .menu-container #emporter .pizza .pizza-items ul.pizza-items-list .pizza-item span.pizza-price {
+  float: right;
+}
+
+main #order-menu .container-parallax .menu .menu-container #carte .entree,
+main #order-menu .container-parallax .menu .menu-container #emporter .entree {
+  margin: 20px 0 0;
+  width: max-content;
+  margin: 0 auto;
+  width: 75%;
+}
+
+main #order-menu .container-parallax .menu .menu-container #carte .entree .entree-items ul.entree-items-list,
+main #order-menu .container-parallax .menu .menu-container #emporter .entree .entree-items ul.entree-items-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+main #order-menu .container-parallax .menu .menu-container #carte .entree .entree-items ul.entree-items-list .entree-item,
+main #order-menu .container-parallax .menu .menu-container #emporter .entree .entree-items ul.entree-items-list .entree-item {
+  text-align: justify;
+  min-height: 40px;
+}
+
+main #order-menu .container-parallax .menu .menu-container #carte .entree .entree-items ul.entree-items-list .entree-item span.entree-price,
+main #order-menu .container-parallax .menu .menu-container #emporter .entree .entree-items ul.entree-items-list .entree-item span.entree-price {
+  float: right;
+}
+
 main footer {
   background-color: #262626;
   color: white;
   height: 300px;
-  padding: 30px; }
-  main footer .footer-title {
-    width: 100%;
-    height: fit-content;
-    border-top: 8px solid #262626;
-    margin: 0;
-    padding: 0; }
-  main footer .left .social {
-    width: 100%;
-    padding: 10px; }
-    main footer .left .social .link {
-      display: inline-block;
-      vertical-align: middle;
-      position: relative;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      border: 2px dashed white;
-      background-clip: content-box;
-      padding: 10px;
-      transition: .5s;
-      color: #D7D0BE;
-      margin-left: 15px;
-      margin-right: 15px;
-      font-size: 2em; }
-      main footer .left .social .link:hover {
-        color: white;
-        border-radius: 0;
-        border: 2px solid white;
-        transform: translateY(-10px) rotate(360deg); }
-      main footer .left .social .link span {
-        color: white;
-        display: block;
-        position: absolute;
-        text-align: center;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%); }
+  padding: 30px;
+}
+
+main footer .footer-title {
+  width: 100%;
+  height: fit-content;
+  border-top: 8px solid #262626;
+  margin: 0;
+  padding: 0;
+}
+
+main footer .left .social {
+  width: 100%;
+  padding: 10px;
+}
+
+main footer .left .social .link {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px dashed white;
+  background-clip: content-box;
+  padding: 10px;
+  transition: .5s;
+  color: #D7D0BE;
+  margin-left: 15px;
+  margin-right: 15px;
+  font-size: 2em;
+}
+
+main footer .left .social .link:hover {
+  color: white;
+  border-radius: 0;
+  border: 2px solid white;
+  transform: translateY(-10px) rotate(360deg);
+}
+
+main footer .left .social .link span {
+  color: white;
+  display: block;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
 /*# sourceMappingURL=menu.css.map */
